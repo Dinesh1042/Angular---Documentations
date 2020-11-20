@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;1,600&display=swap');
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  scroll-margin-block-start: 80px;
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: montserrat;
+  font-size: 1rem;
+  color: #444;
+}
+#main-doc {
+  margin-top: 80px;
+  height: 100vh;
+  transition: 0.5s;
+}
+header {
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 0.13rem;
+  font-size: 1.4rem;
+  margin: 20px;
+  margin-bottom: 10px;
+}
+#main-doc p {
+  padding: 10px 20px;
+}
+.code {
+  margin: 20px;
+  background-color: #fff;
+  width: fit-content;
+
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  line-height: 20px;
+}
+.codehead {
+  background-color: rgb(30, 136, 229);
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  font-size: 0.9rem;
+  font-family: 'Nunito', sans-serif;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+.codecont {
+  padding: 20px;
+}
+#main-doc ul {
+  padding: 10px 50px;
+  padding-bottom: 0;
+}
+#main-doc ul li {
+  margin-bottom: 20px;
+}
+#topnav {
+  background-color: #1976d2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  /* padding: 20px; */
+  height: 10vh;
+  position: fixed;
+  z-index: 2;
+}
+.topnavleft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+ion-icon {
+  font-size: 27px;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 3px;
+}
+ion-icon:active {
+  background-color: rgba(255, 255, 255, 0.23);
+  border-radius: 50%;
+}
+#navbar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 6px 0 6px rgba(0, 0, 0, 0.1);
+}
+#navbar ul {
+  height: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  list-style: none;
+}
+#navbar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+#navbar ul li a {
+  color: #111;
+
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+  transition: 0.3s ease;
+  transition-property: transform, color;
+}
+
+#navbar ul li a::after {
+  content: '';
+  width: 90%;
+  background-color: rgb(30, 136, 229);
+  height: 2px;
+  transform: scale(0);
+  transition: 0.3s ease;
+  transition-property: transform, color;
+}
+#navbar ul li a:hover::after {
+  transform: scale(1);
+}
+#navbar.active {
+  width: 300px;
+  color: #111;
+}
+#navbar ul li a {
+  color: transparent;
+  transition: 0.3s;
+}
+#navbar.active ul li a {
+  color: #111;
+  transition: 0.3s;
+}
+#navbar ul li a:hover {
+  color: rgb(30, 136, 229);
+  transform: scale(0.95);
+}
+body.active #main-doc {
+  margin-left: 320px;
+}
+#topic {
+  text-transform: capitalize;
+  margin-left: 20px;
+  font-size: 39px;
+  color: rgb(30, 136, 229);
+}
+.topnavright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+.topnavright h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topnavright h1 a ion-icon {
+  color: #fff;
+  margin: 0 5px;
+}
+.topnavright h1 a ion-icon:hover {
+  color: rgb(208, 243, 255);
+}
+#lastcode {
+  margin-bottom: 100px;
+}
+#none {
+  display: none;
+}
+@media (max-width: 500px) {
+  #main-doc h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
